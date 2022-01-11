@@ -7,8 +7,7 @@ import org.springframework.jms.annotation.EnableJms;
 
 import javax.sql.DataSource;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-@EnableJms
+@SpringBootApplication
 public class SpringbootApplication {
 
     public static void main(String[] args) {
