@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
+/**
+ * springboot 内置json解析器
+ */
 @RestController
 public class BookController2B {
     @GetMapping("book2B")

@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
+/**
+ * 使用 gson 解析器处理json
+ */
 @RestController
 public class BookController2C {
     @GetMapping("/book2c")
