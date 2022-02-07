@@ -12,8 +12,15 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 public class Consumer1 {
+    // 消费kafka的topic
     @KafkaListener(topics = Producer1.TOPIC)
     public void consumer(String msg) {
         log.info("<<<<<------consumer msg:[{}]", msg);
+    }
+
+    // 消费kafka的topic是一个表达式
+    @KafkaListener(topics = "${kafka.topic}")
+    public void consume2(String msg) {
+        log.info("<<<<<------consumer2 msg:[{}]", msg);
     }
 }

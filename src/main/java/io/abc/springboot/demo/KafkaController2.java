@@ -24,4 +24,9 @@ public class KafkaController2 {
         producer1.sendMessage(msg);
         return "send message: [" + msg + "] success!";
     }
+
+    @GetMapping("/publish2")
+    public boolean sendMessage2(String key, String msg) {
+        return producer1.sendMsgSync(key, msg);
+    }
 }
